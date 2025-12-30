@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en">
+LeafletTrackeTrackTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -83,9 +83,86 @@
 </div>
 
   </section>  <!-- SECOND CTA / PILLAR -->  <section class="bg-slate-950 py-24">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl"><img
-      src="https://images.unsplash.com/photo-1506477331477-33d5d8b3dc85?auto=format&fit=crop&w=1800&q=80"
+   <section id="about" class="py-24 bg-slate-900">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-black mb-6">About AFGHCO</h2>
+    <p class="text-slate-300 text-lg leading-relaxed">
+      AFGHCO Shipping & Logistics is Afghanistan’s enterprise logistics backbone.
+      We specialize in high-risk environments, international freight,
+      and mission-critical supply chains for governments, NGOs, and corporations.
+    </p>
+    <p class="mt-6 text-slate-400">
+      Operating with integrity, compliance, and precision since 2008.
+    </p>
+  </div>
+   </section><section id="warehousing" class="py-24 bg-slate-950">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <h2 class="text-4xl font-black mb-6">Secure Warehousing</h2>
+      <p class="text-slate-300 text-lg leading-relaxed">
+        Our warehousing infrastructure across Afghanistan supports
+        bonded storage, inventory control, and rapid dispatch
+        under high-security conditions.
+      </p>
+      <ul class="mt-6 space-y-3 text-slate-400">
+        <li>• Bonded & non-bonded facilities</li>
+        <li>• 24/7 monitored storage</li>
+        <li>• Inventory & fulfillment services</li>
+        <li>• Rapid last-mile dispatch</li>
+      </ul>
+    </div>
+    <img
+      src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaad5b?auto=format&fit=crop&w=900&q=80"
+      class="rounded-2xl shadow-xl"
+      alt="Warehousing"
+    />
+  </div>
+   </section><section id="global-freight" class="py-24 bg-slate-900">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <img
+      src="https://images.unsplash.com/photo-1506477331477-33d5d8b3dc85?auto=format&fit=crop&w=900&q=80"
+      class="rounded-2xl shadow-xl"
+      alt="Global Freight"
+    />
+    <div>
+      <h2 class="text-4xl font-black mb-6">Global Freight Network</h2>
+      <p class="text-slate-300 text-lg leading-relaxed">
+        We operate air, sea, and land freight solutions linking Afghanistan
+        to global trade hubs including the Middle East, Europe, and Asia.
+      </p>
+      <ul class="mt-6 space-y-3 text-slate-400">
+        <li>• International air freight priority lanes</li>
+        <li>• Sea cargo consolidation & deconsolidation</li>
+        <li>• Cross-border trucking corridors</li>
+        <li>• Humanitarian & government logistics</li>
+      </ul>
+    </div>
+  </div>
+   </section><section id="supply-chain" class="py-24 bg-slate-950">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <h2 class="text-4xl font-black mb-6">Integrated Supply Chain</h2>
+      <p class="text-slate-300 text-lg leading-relaxed">
+        AFGHCO delivers end-to-end supply chain orchestration across Afghanistan
+        and international corridors. From procurement to final delivery,
+        we provide full visibility, risk mitigation, and compliance-driven execution.
+      </p>
+      <ul class="mt-6 space-y-3 text-slate-400">
+        <li>• End-to-end shipment visibility</li>
+        <li>• Customs & regulatory coordination</li>
+        <li>• Secure inland transportation</li>
+        <li>• Enterprise SLA management</li>
+      </ul>
+    </div>
+    <img
+      src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80"
+      class="rounded-2xl shadow-xl"
+      alt="Supply Chain Operations"
+    />
+  </div>
+   </section>max-w-7xlss="max-w-7xl mx-auto px-6">
+     w-fullllass="relative rounded-[2.5rem] overflow-hidden shadow-2xl"><img
+      src="https://images.unsplash.com/photo-1506477331477-33d5dformat5?auto=format&fit=crop&w=1800&q=80"
       alt="Air Freight Operations"
       class="w-full h-[520px] object-cover"
     />
@@ -95,7 +172,7 @@
     <div class="absolute inset-0 flex items-center">
       <div class="px-8 md:px-16 max-w-2xl">
         <h2 class="text-4xl md:text-5xl font-black">
-          Air Freight is Our Backbone.
+ pAir Freight is Our Backbone.
         </h2>
         <p class="mt-6 text-slate-300 text-lg">
           Purpose-built air logistics connecting Afghanistan to global trade
@@ -165,22 +242,33 @@
         </ul>
       </div>
     </div>
-  </footer>  <!-- Leaflet JS -->  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>  <script>
-    function handleTrack() {
-      const id = document.getElementById("trackingInput").value.trim();
-      if (!id) return;
-      alert("Tracking ID entered: " + id);
-    }
+  </footer><!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-    // Initialize demo map (Afghanistan focus)
-    const map = L.map("map").setView([34.5553, 69.2075], 5);
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
-    L.marker([34.5553, 69.2075]).addTo(map).bindPopup("Kabul Hub");
-  <script>
+<script>
+  function handleTrack() {
+    const id = document.getElementById("trackingInput").value.trim();
+    if (!id) return;
+    alert("Tracking ID entered: " + id);
+  }
+
+  // Initialize demo map (Afghanistan focus)
+  const map = L.map("map").setView([34.5553, 69.2075], 5);
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: "© OpenStreetMap contributors"
+  }).addTo(map);
+
+  L.marker([34.5553, 69.2075])
+    .addTo(map)
+    .bindPopup("Kabul Hub");
+
+  // Fix mobile rendering issue
   setTimeout(() => {
     map.invalidateSize();
   }, 500);
 </script>
-  </body>
-</script>
+
+</body>
+</html>/script>
 </html>
