@@ -176,5 +176,11 @@
     const map = L.map("map").setView([34.5553, 69.2075], 5);
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
     L.marker([34.5553, 69.2075]).addTo(map).bindPopup("Kabul Hub");
-  </script></body>
+  <script>
+  setTimeout(() => {
+    map.invalidateSize();
+  }, 500);
+</script>
+  </body>
+</script>
 </html>
