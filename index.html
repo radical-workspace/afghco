@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AFGHCO Shipping & Logistics</title>  <!-- Tailwind CSS CDN (preview / prototype only) -->  <script src="https://cdn.tailwindcss.com"></script>  <!-- Leaflet CSS -->  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />  <style>
+    body {
+      background-color: #020617; /* slate-950 */
+    }
+    .leaflet-container {
+      width: 100%;
+      height: 100%;
+    }
+  </style></head>
+<body class="text-white">  <!-- HEADER -->  <header class="fixed top-0 w-full z-50 bg-slate-900/70 backdrop-blur border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"><!-- BRAND -->
+  <div class="flex items-center gap-3">
+    <div class="w-10 h-10 rounded-lg bg-blue-600/20 flex items-center justify-center text-blue-400 font-black">
+      A
+    </div>
+    <div class="leading-tight">
+      <div class="font-black tracking-wide">AFGHCO</div>
+      <div class="text-[10px] tracking-widest text-blue-400">LOGISTICS</div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="hidden md:flex items-center gap-10 text-sm font-semibold text-slate-300">
+    <a href="#supply-chain" class="hover:text-white">Supply Chain</a>
+    <a href="#global-freight" class="hover:text-white">Global Freight</a>
+    <a href="#warehousing" class="hover:text-white">Warehousing</a>
+    <a href="#about" class="hover:text-white">About AFGHCO</a>
+  </nav>
+
+  <!-- CTA -->
+  <a href="#tracking" class="bg-blue-600 hover:bg-blue-700 transition px-5 py-2 rounded-full text-sm font-bold">
+    Track Shipment
+  </a>
+</div>
+
+  </header>  <!-- HERO -->  <section class="relative min-h-[85vh] pt-28 overflow-hidden">
+    <!-- Background image -->
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=1800&q=80"
+        alt="Air Freight"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-900/90 via-slate-900/70 to-slate-950"></div>
+    </div><!-- Content -->
+<div class="relative z-10 max-w-7xl mx-auto px-6 min-h-[85vh] flex items-center">
+  <div>
+    <h1 class="text-5xl md:text-6xl font-black leading-tight">
+      Global Air Freight.<br />
+      Tracked in Real Time.
+    </h1>
+
+    <p class="mt-6 text-slate-300 text-lg max-w-xl">
+      Afghanistan-origin logistics with live global visibility, compliance,
+      and enterprise-grade control.
+    </p>
+
+    <form
+      action="#tracking"
+      class="mt-8 flex gap-2 max-w-md"
+      onsubmit="event.preventDefault(); handleTrack();"
+    >
+      <input
+        id="trackingInput"
+        placeholder="Enter Tracking ID"
+        class="flex-1 px-4 py-3 rounded bg-white text-black"
+      />
+      <button
+        type="submit"
+        class="bg-blue-600 px-6 py-3 rounded font-bold"
+      >
+        Track
+      </button>
+    </form>
+  </div>
+</div>
+
+  </section>  <!-- SECOND CTA / PILLAR -->  <section class="bg-slate-950 py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl"><img
+      src="https://images.unsplash.com/photo-1506477331477-33d5d8b3dc85?auto=format&fit=crop&w=1800&q=80"
+      alt="Air Freight Operations"
+      class="w-full h-[520px] object-cover"
+    />
+
+    <div class="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-900/60 to-slate-950/30"></div>
+
+    <div class="absolute inset-0 flex items-center">
+      <div class="px-8 md:px-16 max-w-2xl">
+        <h2 class="text-4xl md:text-5xl font-black">
+          Air Freight is Our Backbone.
+        </h2>
+        <p class="mt-6 text-slate-300 text-lg">
+          Purpose-built air logistics connecting Afghanistan to global trade
+          corridors with precision, compliance, and real-time intelligence.
+        </p>
+        <div class="mt-8 flex gap-4 flex-wrap">
+          <a
+            href="#tracking"
+            class="bg-blue-600 px-6 py-3 rounded-full font-bold"
+          >
+            Track Shipment
+          </a>
+          <a
+            href="#global-freight"
+            class="border border-slate-400 px-6 py-3 rounded-full font-semibold"
+          >
+            Explore Air Freight
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  </section>  <!-- TRACKING PREVIEW SECTION -->  <section id="tracking" class="py-24 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="bg-slate-900 rounded-2xl p-8 border border-slate-800">
+        <h3 class="text-2xl font-black mb-4">Live Tracking Preview</h3>
+        <div id="map" class="h-[400px] rounded-xl"></div>
+      </div>
+    </div>
+  </section>  <!-- FOOTER -->  <footer class="bg-slate-900 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-4 gap-10 text-sm text-slate-400">
+      <div>
+        <strong class="text-white text-lg">AFGHCO-SHIPPING</strong>
+        <p class="mt-3 leading-relaxed">
+          Afghanistan’s enterprise logistics backbone — air, land, and
+          cross-border operations engineered for reliability.
+        </p>
+      </div>
+      <div>
+        <p class="font-bold text-white mb-3">Solutions</p>
+        <ul class="space-y-2">
+          <li>Supply Chain</li>
+          <li>Air Freight</li>
+          <li>Sea Cargo</li>
+          <li>Warehousing</li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-bold text-white mb-3">Company</p>
+        <ul class="space-y-2">
+          <li>About AFGHCO</li>
+          <li>Compliance</li>
+          <li>Careers</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-bold text-white mb-3">Operations</p>
+        <ul class="space-y-2">
+          <li>Live Tracking</li>
+          <li>Global Freight</li>
+          <li>Warehousing</li>
+          <li>Emergency Desk</li>
+        </ul>
+      </div>
+    </div>
+  </footer>  <!-- Leaflet JS -->  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>  <script>
+    function handleTrack() {
+      const id = document.getElementById("trackingInput").value.trim();
+      if (!id) return;
+      alert("Tracking ID entered: " + id);
+    }
+
+    // Initialize demo map (Afghanistan focus)
+    const map = L.map("map").setView([34.5553, 69.2075], 5);
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
+    L.marker([34.5553, 69.2075]).addTo(map).bindPopup("Kabul Hub");
+  </script></body>
+</html>
